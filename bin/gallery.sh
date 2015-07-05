@@ -66,15 +66,6 @@ close_div() {
   echo '</div>'
 }
 
-image_group() {
-  shift
-  for img in "$@"; do
-    echo "<div class=\"large-${colsize} medium-${colsize} small-${colsize} columns\">"
-    image_line "$web_path"/"$img"
-    close_div
-  done
-}
-
 gallery() {
   columns=$1
   echo "<ul class=\"clearing-thumbs large-12 medium-12 small-12 small-block-grid-${columns}\" data-clearing>"
