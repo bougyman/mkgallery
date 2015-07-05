@@ -117,12 +117,18 @@ while getopts ":n:c:w:d:T:mhi" opt;do
         ;;
   esac
 done
+
 shift $((OPTIND-1))
+
 declare -a group
+
 gallery_name=${gallery_name:-${gallery_base}}
 web_path=${web_path:-/${gallery_base}}
 thumb_path=${thumb_path:-${web_path}/thumbs}
+
 echo "Name: $gallery_name Web path: $web_path Thumbs: $thumb_path Columns: ${num_cols:-3}" 1>&2
+
+# Thumbnail creation
 if [ -n "$make_thumbs" ];then
   echo "Making thumbs in $tmumb_path" 1>&2
   ls *.jpg *.png *.gif 2>/dev/null|while read m;do
@@ -139,13 +145,16 @@ if [ -n "$make_thumbs" ];then
   echo "Thumbs created in thumbs/" 1>&2
   exit
 fi
+
+# Index creation
 if [ -n "$build_index" ];then
   echo "Building Index" 1>&2
   description=${description:-${gallery_name}}
   title=${title:-${gallery_name}}
   index
-else
-  echo "Building Gallery" 1>&2
-  gallery ${num_cols:-3}
+  exit
 fi
 
+# Gallery/Image list creation
+echo "Building Gallery" 1>&2
+gallery ${num_cols:-3}
