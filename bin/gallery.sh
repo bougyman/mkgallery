@@ -1,6 +1,6 @@
 #!/bin/sh -e
 index() {
-  cat << DOC
+  cat << HTML
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -45,7 +45,7 @@ index() {
     </script>
   </body>
 </html>
-DOC
+HTML
 }
 
 get_files() {
