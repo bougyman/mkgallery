@@ -126,7 +126,7 @@ gallery_name=${gallery_name:-${gallery_base}}
 web_path=${web_path:-/${gallery_base}}
 thumb_path=${thumb_path:-${web_path}/thumbs}
 
-echo "Name: $gallery_name Web path: $web_path Thumbs: $thumb_path Columns: ${num_cols:-3}" 1>&2
+echo "Name: $gallery_name Web path: $web_path Thumbs: $thumb_path Columns: ${num_cols:-2}" 1>&2
 
 # Thumbnail creation
 if [ -n "$make_thumbs" ];then
@@ -153,4 +153,4 @@ fi
 
 # Gallery/Image list creation
 echo "Building Gallery" 1>&2
-gallery ${num_cols:-3}
+gallery ${num_cols:-2}
