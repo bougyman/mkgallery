@@ -25,6 +25,7 @@ gallery.sh [OPTIONS]
 cd <directory_with_images>
 img_gallery.sh
 ```
+The gallery should be viewable at http://webserver/\<directory\_with\_images\>
 * Manual
 ```
 cd <directory_with_images>
@@ -35,7 +36,7 @@ gallery.sh -c6 > ul-lg.html
 mkdir thumbs
 gallery.sh -m
 ```
-The gallery should be viewable at http://webserver/\<directory\_with\_images\>
+The gallery should be viewable at http://webserver/\<directory\_with\_images\>/gallery.html
 
 This assumes \<directory\_with\_images\> is served a the / of webroot. Use the -w option to prefix paths from webroot to the current directory.
 
