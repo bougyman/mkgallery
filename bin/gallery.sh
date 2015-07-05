@@ -79,7 +79,7 @@ usage() {
   echo "Create a gallery from images in current directory"
   echo "$0 [OPTIONS] <number of columns>"
   echo "  OPTIONS"
-  echo "  -c COLS - number of columns DEFAULT: 3"
+  echo "  -c COLS - number of columns DEFAULT: 2"
   echo "  -d DESC - gallery description DEFAULT: ${gallery_base}"
   echo "  -n NAME - gallery name DEFAULT: ${gallery_base}"
   echo "  -t PATH - thumbnail path to this gallery DEFAULT: /${gallery_base}/thumbs"
