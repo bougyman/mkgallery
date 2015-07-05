@@ -20,10 +20,18 @@ gallery.sh [OPTIONS]
  
 ## Example
 
+* Automatic
 ```
 cd <directory_with_images>
-gallery.sh -i > index.html
 img_gallery.sh
+```
+* Manual
+```
+cd <directory_with_images>
+gallery.sh -i > gallery.html
+gallery.sh -c2 > ul.html
+gallery.sh -c4 > ul-m.html
+gallery.sh -c6 > ul-lg.html
 mkdir thumbs
 gallery.sh -m
 ```
