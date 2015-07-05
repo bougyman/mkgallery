@@ -36,7 +36,6 @@ index() {
     </div>     
     <script src="/js/vendor/jquery.js"></script>
     <script src="/js/foundation.min.js"></script>
-    <script src="/js/lightbox.min.js"></script>
     <script>
       \$(document).foundation();
     </script>
@@ -56,6 +55,7 @@ li_line() {
 }
 
 gallery() {
+  set -x
   columns=$1
   echo "<ul class=\"clearing-thumbs large-12 medium-12 small-12 small-block-grid-${columns}\" data-clearing>"
   get_files|while read img; do

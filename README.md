@@ -42,3 +42,7 @@ This assumes \<directory\_with\_images\> is served a the / of webroot. Use the -
 ## Demo
 
 Sample output at http://dev.bougyman.com/monument
+generated with
+```
+img_gallery.sh -d '2014 Monument Valley Trip' -n 'Monument Valley'
+```
