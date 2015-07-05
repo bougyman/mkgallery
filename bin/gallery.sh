@@ -87,8 +87,10 @@ usage() {
   echo "  -d DESC - gallery description"
   echo "  -T DESC - gallery title"
 }
+
 build_index=""
 ul=""
+
 while getopts ":n:c:w:d:T:mhi" opt;do
   case $opt in
     u) ul=true

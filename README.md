@@ -1,4 +1,4 @@
-== Usage
+## Usage
 ```
 gallery.sh [OPTIONS]
 ```
