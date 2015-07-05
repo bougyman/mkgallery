@@ -1,0 +1,4 @@
+== Usage
+```
+gallery.sh [OPTIONS]
+```
