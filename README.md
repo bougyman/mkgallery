@@ -1,7 +1,7 @@
 ## Requirements
 
 * <a href="http://foundation.zurb.com/">Foundation 5</a> must be available in web root as /js, /css, and /img.
-* GraphicsMagick is used for thumbnail creation
+* <a href="http://www.graphicsmagick.org/">GraphicsMagick</a> is used for thumbnail creation
 
 ## Usage
 ```
