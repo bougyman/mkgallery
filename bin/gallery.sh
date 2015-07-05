@@ -58,14 +58,6 @@ li_line() {
   echo "<li><a href=\"$img_path\" class="th"><img src=\"$thumb_path/$img\" data-caption=\"$img\"></img></a></li>"
 }
 
-row_header() {
-  echo '<div class="row">'
-}
-
-close_div() {
-  echo '</div>'
-}
-
 gallery() {
   columns=$1
   echo "<ul class=\"clearing-thumbs large-12 medium-12 small-12 small-block-grid-${columns}\" data-clearing>"
