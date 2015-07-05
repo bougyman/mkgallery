@@ -17,3 +17,7 @@ gallery.sh [OPTIONS]
   *    -T NAME  Title for the gallery (Only valid in -i mode)
   *    -m       Create thumbnails for this gallery
   *    -h       Show Usage
+ 
+## Demo
+
+Sample output at http://dev.bougyman.com/monument
