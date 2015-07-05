@@ -18,6 +18,16 @@ gallery.sh [OPTIONS]
   *    -m       Create thumbnails for this gallery
   *    -h       Show Usage
  
+## Example
+
+```
+cd <directory_with_images>
+gallery.sh -i > index.html
+img_gallery.sh
+```
+
+This assumes \<directory\_with\_images\> is served a the / of webroot. Use the -w option to prefix paths from webroot to the current directory.
+
 ## Demo
 
 Sample output at http://dev.bougyman.com/monument
