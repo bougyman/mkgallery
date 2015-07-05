@@ -11,7 +11,6 @@ index() {
     <script src="/js/vendor/modernizr.js"></script>
   </head>
   <body>
-    
     <div class="row">
       <div class="large-12 columns">
         <div class="panel">
@@ -19,7 +18,6 @@ index() {
         </div>
       </div>
     </div>
-
     <div class="row">
       <div class="large-12 medium-12 columns">
         <!-- Picture Grid -->
@@ -31,12 +29,11 @@ index() {
       <div class="large-4-centered">
         <section>
           <address>
-            Copyright 2014 (c) Tj Vanderpoel
+            Copyright 2014 (c) bougyman (bougyman) &lt;bougyman@voidlinux.eu&gt;
           </address>
         </section>
       </div>
     </div>     
-    
     <script src="/js/vendor/jquery.js"></script>
     <script src="/js/foundation.min.js"></script>
     <script src="/js/lightbox.min.js"></script>
