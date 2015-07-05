@@ -79,13 +79,13 @@ usage() {
   echo "Create a gallery from images in current directory"
   echo "$0 [OPTIONS] <number of columns>"
   echo "  OPTIONS"
-  echo "  -n NAME - gallery name DEFAULT: ${gallery_base}"
-  echo "  -w PATH - web path to this gallery DEFAULT: /${gallery_base}"
-  echo "  -t PATH - thumbnail path to this gallery DEFAULT: /${gallery_base}/thumbs"
   echo "  -c COLS - number of columns DEFAULT: 3"
+  echo "  -d DESC - gallery description DEFAULT: ${gallery_base}"
+  echo "  -n NAME - gallery name DEFAULT: ${gallery_base}"
+  echo "  -t PATH - thumbnail path to this gallery DEFAULT: /${gallery_base}/thumbs"
+  echo "  -w PATH - web path to this gallery DEFAULT: /${gallery_base}"
   echo "  -i      - build index instead of image list"
   echo "  -m      - Make thumbnails instead of index or image list"
-  echo "  -d DESC - gallery description DEFAULT: ${gallery_base}"
 }
 
 while getopts ":n:c:w:d:mhi" opt;do
