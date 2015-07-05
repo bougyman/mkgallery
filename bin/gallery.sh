@@ -6,7 +6,7 @@ index() {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${title}</title>
+    <title>${gallery_name}</title>
     <link rel="stylesheet" href="/css/foundation.css" />
     <script src="/js/vendor/modernizr.js"></script>
   </head>
@@ -83,15 +83,15 @@ usage() {
   echo "  -w PATH - web path to this gallery DEFAULT: /${gallery_base}"
   echo "  -t PATH - thumbnail path to this gallery DEFAULT: /${gallery_base}/thumbs"
   echo "  -c COLS - number of columns DEFAULT: 3"
-  echo "  -i      - build index instead of images.html"
-  echo "  -d DESC - gallery description"
-  echo "  -T DESC - gallery title"
+  echo "  -i      - build index instead of image list"
+  echo "  -m      - Make thumbnails instead of index or image list"
+  echo "  -d DESC - gallery description DEFAULT: ${gallery_base}"
 }
 
 build_index=""
 ul=""
 
-while getopts ":n:c:w:d:T:mhi" opt;do
+while getopts ":n:c:w:d:mhi" opt;do
   case $opt in
     u) ul=true
       ;;
@@ -106,8 +106,6 @@ while getopts ":n:c:w:d:T:mhi" opt;do
     c) num_cols=$OPTARG
       ;;
     d) description=$OPTARG
-      ;;
-    T) title=$OPTARG
       ;;
     m) make_thumbs=true
       ;;
@@ -149,7 +147,6 @@ fi
 if [ -n "$build_index" ];then
   echo "Building Index" 1>&2
   description=${description:-${gallery_name}}
-  title=${title:-${gallery_name}}
   index
   exit
 fi
