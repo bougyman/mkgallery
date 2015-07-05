@@ -3,22 +3,22 @@
 gallery.sh [OPTIONS]
 ```
 * OPTIONS
-**    u) ul=true
+  *    u) ul=true
         ;;
-**    i) build_index=true
+  *    i) build_index=true
         ;;
-**    n) gallery_name=$OPTARG
+  *    n) gallery_name=$OPTARG
         ;;
-**    t) thumb_path=$OPTARG
+  *    t) thumb_path=$OPTARG
         ;;
-**    w) web_path=$OPTARG
+  *    w) web_path=$OPTARG
         ;;
-**    c) num_cols=$OPTARG
+  *    c) num_cols=$OPTARG
         ;;
-**    d) description=$OPTARG
+  *    d) description=$OPTARG
         ;;
-**    T) title=$OPTARG
+  *    T) title=$OPTARG
         ;;
-**    m) make_thumbs=true
+  *    m) make_thumbs=true
         ;;
-**    h) usage
+  *    h) usage
