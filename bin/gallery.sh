@@ -88,9 +88,6 @@ usage() {
   echo "  -d DESC - gallery description DEFAULT: ${gallery_base}"
 }
 
-build_index=""
-ul=""
-
 while getopts ":n:c:w:d:mhi" opt;do
   case $opt in
     u) ul=true
@@ -119,8 +116,6 @@ while getopts ":n:c:w:d:mhi" opt;do
 done
 
 shift $((OPTIND-1))
-
-declare -a group
 
 gallery_name=${gallery_name:-${gallery_base}}
 web_path=${web_path:-/${gallery_base}}
