@@ -126,7 +126,7 @@ echo "Name: $gallery_name Web path: $web_path Thumbs: $thumb_path Columns: ${num
 # Thumbnail creation
 if [ -n "$make_thumbs" ];then
   echo "Making thumbs in $tmumb_path" 1>&2
-  ls *.jpg *.png *.gif 2>/dev/null|while read m;do
+  get_files|while read m;do
     file=${m##*/}
     if [ -f "thumbs/$file" ];then
       echo "thumbs/${file} already exists, skipping" 1>&2
