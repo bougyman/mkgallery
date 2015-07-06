@@ -48,7 +48,7 @@ HTML
 }
 
 get_files() {
-  ls *.jpg *.png *.gif 2>/dev/null
+  ls *.[jJ][pP][gG] *.[pP][nN][gG] *.[gG][iI][fF] 2>/dev/null
 }
 
 li_line() {
@@ -129,7 +129,6 @@ fi
 thumb_path=${thumb_path:-${web_path}/thumbs}
 
 echo "Name: $gallery_name Web path: $web_path Thumbs: $thumb_path Columns: ${num_cols:-2}" 1>&2
-exit
 
 # Thumbnail creation
 if [ -n "$make_thumbs" ];then
