@@ -72,6 +72,8 @@ gallery() {
 HTML
 }
 
+[ -f ~/.mkgalleryrc ] && . ~/.mkgalleryrc
+user_root=$WEB_ROOT
 gallery_path=$(pwd)
 gallery_base=${gallery_path##*/}
 
@@ -118,10 +120,16 @@ done
 shift $((OPTIND-1))
 
 gallery_name=${gallery_name:-${gallery_base}}
-web_path=${web_path:-/${gallery_base}}
+if [ -n "$user_root" ];then
+  gallery_root=${gallery_path#$user_root}
+  web_path=${web_path:-$gallery_root}
+else
+  web_path=${web_path:-/${gallery_base}}
+fi
 thumb_path=${thumb_path:-${web_path}/thumbs}
 
 echo "Name: $gallery_name Web path: $web_path Thumbs: $thumb_path Columns: ${num_cols:-2}" 1>&2
+exit
 
 # Thumbnail creation
 if [ -n "$make_thumbs" ];then
